@@ -56,7 +56,7 @@ def get_abi(contract_source: str, name: str) -> Dict:
     input_json = {
         "language": "Vyper",
         "sources": {name: {"content": contract_source}},
-        "settings": {"outputSelection": {"*": {"*": ["abi"]}}, "optimize": false},
+        "settings": {"outputSelection": {"*": ["evm.bytecode"],}}, "optimize": false},
         
     }
     if _active_version == Version(vyper.__version__):
