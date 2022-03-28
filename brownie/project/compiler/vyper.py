@@ -54,11 +54,10 @@ def get_abi(contract_source: str, name: str) -> Dict:
     This function is deprecated in favor of `brownie.project.compiler.get_abi`
     """
     input_json = {
-        "language": "Vyper",
-        "sources": {name: {"content": contract_source}},
-        "settings": {"outputSelection": {"*": ["evm.bytecode"],}}, "optimize": false},
-        
-    }
+            "language": "Vyper",
+            "sources": {name: {"content": contract_source}},
+            "settings": {"outputSelection": {"*": ["evm.bytecode"],}}, "optimize": false
+            }
     if _active_version == Version(vyper.__version__):
         try:
             compiled = vyper_json.compile_json(input_json)
