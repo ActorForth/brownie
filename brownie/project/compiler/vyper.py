@@ -235,18 +235,18 @@ def compile_from_input_json(
     if version == Version(vyper.__version__):
         try:
             vvm_compiled = vyper_json.compile_json(input_json, root_path=allow_paths)
-            print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
-            print("vvm_compiled: ", vvm_compiled)
-            print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
+            # print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
+            # print("vvm_compiled: ", vvm_compiled)
+            # print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
             return vvm_compiled
         except VyperException as exc:
             raise exc.with_traceback(None)
     else:
         try:
             vvm_compiled = vvm.compile_standard(input_json, base_path=allow_paths, vyper_version=version)
-            print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
-            print("vvm_compiled: ", vvm_compiled)
-            print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
+            # print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
+            # print("vvm_compiled: ", vvm_compiled)
+            # print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
             return vvm_compiled
         except vvm.exceptions.VyperError as exc:
             raise CompilerError(exc, "vyper")
