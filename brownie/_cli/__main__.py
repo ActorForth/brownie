@@ -35,7 +35,7 @@ each command."""
 
 def main():
 
-    print(f"Brownie v{__version__} - No vyper optimizer for this version Σ(O_O)\n")
+    print(f"Brownie v{__version__} - No vyper optimizer for this version Σ(°ロ°)\n")
 
     if "--version" in sys.argv:
         sys.exit()
