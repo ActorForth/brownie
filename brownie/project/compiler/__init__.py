@@ -138,7 +138,7 @@ def compile_and_format(
             optimizer=optimizer,
         )
 
-        input_json["settings"]["optimize"] = False
+        input_json["settings"]["optimize"] = True
         print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦") 
         print("input_json: ", input_json["settings"]) 
         print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦") 
