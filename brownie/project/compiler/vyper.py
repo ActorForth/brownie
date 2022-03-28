@@ -237,6 +237,8 @@ def compile_from_input_json(
             print("datakeys: ", vvm_compiled['contracts'].keys())
             print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy'].keys())
             print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721'].keys())
+            print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721']['evm'].keys())
+            print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721']['evm']['bytecode']['object'])
             print("bytecode: ", vvm_compiled['contracts']['name']['name']['evm']['bytecode']['object'])
             print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
             return vvm_compiled
@@ -250,6 +252,8 @@ def compile_from_input_json(
             print("datakeys: ", vvm_compiled['contracts'].keys())
             print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy'].keys())
             print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721'].keys())
+            print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721']['evm'].keys())
+            print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721']['evm']['bytecode']['object'])
             print("byetcode: ", vvm_compiled['contracts']['name']['name']['evm']['bytecode']['object'])
             print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
             return vvm_compiled
