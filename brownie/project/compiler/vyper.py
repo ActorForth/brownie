@@ -69,7 +69,9 @@ def get_abi(contract_source: str, name: str) -> Dict:
             compiled = vvm.compile_standard(input_json, vyper_version=_active_version)
         except vvm.exceptions.VyperError as exc:
             raise CompilerError(exc, "vyper")
-
+    print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
+    print("compiled: ", compiled)
+    print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
     return {name: compiled["contracts"][name][name]["abi"]}
 
 
@@ -233,12 +235,20 @@ def compile_from_input_json(
         outputs.remove("devdoc")
     if version == Version(vyper.__version__):
         try:
-            return vyper_json.compile_json(input_json, root_path=allow_paths)
+            vvm_compiled = vyper_json.compile_json(input_json, root_path=allow_paths)
+            print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
+            print("vvm_compiled: ", vvm_compiled)
+            print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
+            return vvm_compiled
         except VyperException as exc:
             raise exc.with_traceback(None)
     else:
         try:
-            return vvm.compile_standard(input_json, base_path=allow_paths, vyper_version=version)
+            vvm_compiled = vvm.compile_standard(input_json, base_path=allow_paths, vyper_version=version)
+            print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
+            print("vvm_compiled: ", vvm_compiled)
+            print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
+            return vvm_compiled
         except vvm.exceptions.VyperError as exc:
             raise CompilerError(exc, "vyper")
 
