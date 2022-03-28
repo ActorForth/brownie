@@ -233,7 +233,9 @@ def compile_from_input_json(
         try:
             vvm_compiled = vyper_json.compile_json(input_json, root_path=allow_paths)
             print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
+            print(vvm_compiled)
             print("datakeys: ", vvm_compiled.keys())
+            print("datakeys: ", vvm_compiled['contracts'].keys())
             print("bytecode: ", vvm_compiled['contracts']['name']['name']['evm']['bytecode']['object'])
             print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
             return vvm_compiled
@@ -243,7 +245,9 @@ def compile_from_input_json(
         try:
             vvm_compiled = vvm.compile_standard(input_json, base_path=allow_paths, vyper_version=version)
             print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
+            print(vvm_compiled)
             print("datakeys: ", vvm_compiled.keys())
+            print("datakeys: ", vvm_compiled['contracts'].keys())
             print("byetcode: ", vvm_compiled['contracts']['name']['name']['evm']['bytecode']['object'])
             print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
             return vvm_compiled
