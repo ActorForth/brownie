@@ -140,7 +140,7 @@ def compile_and_format(
 
         input_json["settings"]["optimize"] = False
         print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦") 
-        print("input_json: ", input_json) 
+        print("input_json: ", input_json["settings"]) 
         print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦") 
         output_json = compile_from_input_json(input_json, silent, allow_paths)
         build_json.update(generate_build_json(input_json, output_json, compiler_data, silent))
