@@ -235,10 +235,10 @@ def compile_from_input_json(
             print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
             print("datakeys: ", vvm_compiled.keys())
             print("datakeys: ", vvm_compiled['contracts'].keys())
-            print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy'].keys())
-            print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721'].keys())
-            print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721']['evm'].keys())
-            print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721']['evm']['bytecode']['object'])
+            # print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy'].keys())
+            # print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721'].keys())
+            # print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721']['evm'].keys())
+            # print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721']['evm']['bytecode']['object'])
             print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
             return vvm_compiled
         except VyperException as exc:
@@ -249,10 +249,10 @@ def compile_from_input_json(
             print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
             print("datakeys: ", vvm_compiled.keys())
             print("datakeys: ", vvm_compiled['contracts'].keys())
-            print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy'].keys())
-            print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721'].keys())
-            print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721']['evm'].keys())
-            print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721']['evm']['bytecode']['object'])
+            # print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy'].keys())
+            # print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721'].keys())
+            # print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721']['evm'].keys())
+            # print("datakeys: ", vvm_compiled['contracts']['contracts/token/SurpriseBox721.vy']['SurpriseBox721']['evm']['bytecode']['object'])
             print("▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦▦")
             return vvm_compiled
         except vvm.exceptions.VyperError as exc:
